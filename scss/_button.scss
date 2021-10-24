@@ -1,0 +1,38 @@
+@use "variables" as *;
+@use "media-queries" as *;
+
+.btn-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 4.5rem;
+    width: 6.3rem;
+    border: none;
+    border-radius: 10rem;
+    background: $l-gradient-btn-submit;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &__img {
+        vertical-align: middle;
+    }
+
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+        box-shadow: 0 10px 10px rgba($color: $desaturated-red, $alpha: 0.5);
+
+        .btn-submit__img {
+            animation: arrow-yoyo 1s ease-in-out infinite;
+        }
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    @include large-screens() {
+        width: 8rem;
+    }
+}

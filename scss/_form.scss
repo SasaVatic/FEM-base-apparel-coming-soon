@@ -1,0 +1,72 @@
+@use "variables" as *;
+@use "media-queries" as *;
+
+.form {
+    &__input {
+        font-family: inherit;
+        font-size: 1.4rem;
+        color: $dark-grayish-red;
+        padding: 1.7rem 7.5rem 1.7rem 2.3rem;
+        border: 1px solid $desaturated-red;
+        border-radius: 10rem;
+        height: 4.5rem;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        background-color: transparent;
+
+        &:hover {
+            box-shadow: 3px 3px 10px rgba($color: $black, $alpha: 0.3);
+            border: none;
+        }
+
+        &:focus {
+            background-color: transparent;
+            box-shadow: 3px 3px 10px rgba($color: $black, $alpha: 0.3);
+            border: none;
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $desaturated-red;
+        }
+
+        @include large-screens() {
+            padding-right: 9rem;
+        }
+    }
+    &__input.active {
+        border: 2px solid $soft-red;
+        padding-right: 10.5rem;
+
+        @include large-screens() {
+            padding-right: 12rem;
+        }
+    }
+
+    &__error-icon {
+        position: absolute;
+        top: 50%;
+        right: 7.5rem;
+        transform: translateY(calc(-50% - 1rem));
+        opacity: 0;
+
+        @include large-screens() {
+            right: 9rem;
+        }
+    }
+    &__error-icon.active {
+        opacity: 1;
+    }
+
+    &__error-msg {
+        display: block;
+        font-size: 1.2rem;
+        text-align: start;
+        color: $soft-red;
+        padding: 0.5rem 0 0 2.3rem;
+        opacity: 0;
+    }
+    &__error-msg.active {
+        opacity: 1;
+    }
+}

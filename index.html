@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="hero__bg"></div>
+
+        <div class="hero__logo-box">
+          <img src="./assets/images/logo.svg" alt="logo image" class="hero__logo">
+        </div>
+
+        <picture class="hero__img-box">
+          <source srcset="./assets/images/hero-desktop.jpg" media="(min-width: 1200px)">
+          <img src="./assets/images/hero-mobile.jpg"
+            alt="Brunette haired girl in peach colored t-shirt with charming eyes" class="hero__img">
+        </picture>
+
+        <div class="hero__text-box">
+          <h1 class="heading-primary">
+            We're
+            <span class="heading-primary--accent">coming<br>soon</span>
+          </h1>
+          <p class="hero__text">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+          <div class="hero__input-box">
+            <form action="#" class="form">
+              <input id="email" type="text" placeholder="Email Address" class="form__input" autocomplete="off">
+              <img src="./assets/images/icon-error.svg" alt="error icon" class="form__error-icon">
+              <span class="form__error-msg">Please provide valid email</span>
+              <button type="submit" class="btn-submit">
+                <img src="./assets/images/icon-arrow.svg" alt="arrow icon" class="btn-submit__img">
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <footer class="footer">
+    <p class="footer__attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="footer__link">Frontend
+        Mentor</a>.
+      Coded by <a href="https://github.com/SasaVatic" target="_blank" class="footer__link">Saša Vatić</a>.
+    </p>
+  </footer>
+
+  <script type="module" src="./assets/js/index.js"></script>
+</body>
+
+</html>

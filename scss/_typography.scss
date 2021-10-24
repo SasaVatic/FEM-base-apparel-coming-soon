@@ -1,0 +1,30 @@
+@use "variables" as *;
+@use "media-queries" as *;
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.heading-primary {
+    font-size: 4rem;
+    font-weight: $font-light;
+    color: $desaturated-red;
+    letter-spacing: 1.4rem;
+    text-transform: uppercase;
+
+    &--accent {
+        display: block;
+        font-weight: $font-semi-bold;
+        color: $dark-grayish-red;
+    }
+
+    @include large-screens() {
+        font-size: 5rem;
+        letter-spacing: 1.9rem;
+    }
+}

@@ -1,0 +1,97 @@
+@use "variables" as *;
+@use "media-queries" as *;
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+
+    &__logo-box {
+        grid-column: 1 / 13;
+        padding: 3rem;
+
+        @include large-screens() {
+            grid-column: 1 / 8;
+            grid-row: 1 / 2;
+            padding: 7% 0 0 20%;
+            align-self: start;
+        }
+    }
+
+    &__logo {
+        height: 2rem;
+        @include large-screens() {
+            height: 3rem;
+        }
+    }
+
+    &__img-box {
+        grid-column: 1 / 13;
+
+        @include large-screens() {
+            grid-column: 8 / 13;
+            grid-row: 1 / 3;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: calc(100% + 1px);
+    }
+
+    &__text-box {
+        grid-column: 1 / 13;
+        padding: 6rem 3rem;
+        text-align: center;
+
+        @include large-screens() {
+            grid-column: 1 / 8;
+            grid-row: 1 / 3;
+            text-align: start;
+            padding: 27% 28% 0 20%;
+        }
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        color: $desaturated-red;
+        line-height: 1.7;
+        padding: 1.5rem 0 2rem 0;
+        max-width: 40rem;
+
+        @include large-screens() {
+            padding-top: 2rem;
+        }
+    }
+
+    &__input-box {
+        position: relative;
+        margin: 1.5rem auto 0 auto;
+        transition: all 0.3s ease-in-out;
+        max-width: 40rem;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-image: $l-gradient-hero-bg;
+
+        @include large-screens() {
+            grid-column: 1 / 8;
+            grid-row: 1 / 3;
+            background-image: url("../images/bg-pattern-desktop.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
